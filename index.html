@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gift Roulette Bot</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Загрузочный экран -->
+  <div id="loader">
+    <div class="loader-content">
+      <img src="images/logo.png" alt="Лого" class="loader-logo">
+      <p>Загрузка...</p>
+    </div>
+  </div>
+
+  <!-- Верхняя панель -->
+  <div class="top-bar">
+    <div class="balance">⭐ Звёзды: <span id="balance">0</span></div>
+    <button id="claimStars">Получить 100 ⭐</button>
+  </div>
+
+  <!-- Главное содержимое -->
+  <div id="content"></div>
+
+  <!-- Нижнее меню -->
+  <div class="bottom-menu">
+    <div class="menu-button active" id="btn-profile" onclick="openProfile()">
+      <img src="images/profile.png" alt="Профиль" />
+      <span>Профиль</span>
+      <div class="underline"></div>
+    </div>
+    <div class="menu-button" id="btn-cases" onclick="openCases()">
+      <img src="images/cases.png" alt="Кейсы" />
+      <span>Кейсы</span>
+      <div class="underline"></div>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
