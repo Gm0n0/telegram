@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #100c14; /* Set background color to #100c14 */
+  background-color: #100c14;
   color: #222;
 }
 
@@ -76,7 +76,7 @@ body {
   border-radius: 10px;
   padding: 10px;
   text-align: center;
-  background-color: #181414; /* Set case background color to #181414 */
+  background-color: #181414;
   cursor: pointer;
   transition: 0.2s;
 }
@@ -117,7 +117,7 @@ body {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background: #181414; /* Set menu background color to #181414 */
+  background: #181414;
   border-top: 1px solid #ddd;
   display: flex;
   justify-content: space-around;
