@@ -1,46 +1,123 @@
+/* Основной стиль */
 body {
   margin: 0;
+  padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f8f8f8;
+  background-color: #100c14; /* Set background color to #100c14 */
+  color: #222;
 }
 
+/* Загрузочный экран */
+#loading-screen {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #100c14; /* Set background color to #100c14 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Верхняя панель */
 .top-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  background-color: #ffffff;
+  background-color: #f6f6f6;
+  padding: 10px 15px;
   border-bottom: 1px solid #ddd;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 999;
 }
 
-.top-bar .balance {
-  font-size: 16px;
-  font-weight: bold;
-}
-
-#claimStars {
-  padding: 6px 12px;
+#claim-stars {
   background-color: #007aff;
   color: white;
   border: none;
-  border-radius: 8px;
-  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 500;
   cursor: pointer;
 }
 
-#content {
-  padding: 15px;
-  min-height: 70vh;
+/* Контент страниц */
+.page {
+  display: none;
+  padding: 20px;
 }
 
+.page.active {
+  display: block;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+/* Кейсы */
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 15px;
+}
+
+.case {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  background-color: #181414; /* Set case background color to #181414 */
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.case:hover {
+  background-color: #2d2d2d;
+}
+
+.case img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.gift-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.gift-grid img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* Промокод */
+#promo-input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Нижнее меню */
 .bottom-menu {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background: #ffffff;
+  background: #181414; /* Set menu background color to #181414 */
   border-top: 1px solid #ddd;
   display: flex;
   justify-content: space-around;
@@ -56,13 +133,11 @@ body {
   color: #444;
   position: relative;
   padding-bottom: 5px;
-  width: 80px;
 }
 
 .menu-button img {
   width: 28px;
   height: 28px;
-  margin-bottom: 4px;
 }
 
 .underline {
